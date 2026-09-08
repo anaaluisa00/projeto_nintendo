@@ -33,6 +33,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        View navInicio = findViewById(R.id.navInicio);
+        navInicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Already in MainActivity
+            }
+        });
+
         View navPerfil = findViewById(R.id.navPerfil);
         navPerfil.setOnClickListener(new View.OnClickListener() {
             @Override
