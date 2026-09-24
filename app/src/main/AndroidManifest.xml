@@ -34,6 +34,9 @@
         <activity
             android:name=".ExploreActivity"
             android:exported="false" />
+        <activity
+            android:name=".GpsActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

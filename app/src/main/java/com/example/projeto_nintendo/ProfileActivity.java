@@ -33,29 +33,25 @@ public class ProfileActivity extends AppCompatActivity {
         });
 
         // Bottom Navigation Logic
-        findViewById(R.id.navInicio).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ProfileActivity.this, MainActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                startActivity(intent);
-            }
+        findViewById(R.id.navInicio).setOnClickListener(v -> {
+            Intent intent = new Intent(ProfileActivity.this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            startActivity(intent);
         });
 
-        findViewById(R.id.navExplorar).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ProfileActivity.this, ExploreActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                startActivity(intent);
-            }
+        findViewById(R.id.navExplorar).setOnClickListener(v -> {
+            Intent intent = new Intent(ProfileActivity.this, ExploreActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            startActivity(intent);
         });
 
-        findViewById(R.id.navPerfil).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Already in ProfileActivity
-            }
+        findViewById(R.id.navComprar).setOnClickListener(v -> {
+            Intent intent = new Intent(ProfileActivity.this, GpsActivity.class);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.navPerfil).setOnClickListener(v -> {
+            // Already in ProfileActivity
         });
     }
 }

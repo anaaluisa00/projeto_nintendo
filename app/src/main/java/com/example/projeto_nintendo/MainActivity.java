@@ -25,38 +25,34 @@ public class MainActivity extends AppCompatActivity {
         });
 
         ImageView profileIcon = findViewById(R.id.imageView5);
-        profileIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
-                startActivity(intent);
-            }
+        profileIcon.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+            startActivity(intent);
         });
 
         View navInicio = findViewById(R.id.navInicio);
-        navInicio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Already in MainActivity
-            }
+        navInicio.setOnClickListener(v -> {
+            // Already in MainActivity
         });
 
         View navPerfil = findViewById(R.id.navPerfil);
-        navPerfil.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
-                startActivity(intent);
-            }
+        navPerfil.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+            startActivity(intent);
         });
 
         View navExplorar = findViewById(R.id.navExplorar);
-        navExplorar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ExploreActivity.class);
-                startActivity(intent);
-            }
+        navExplorar.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ExploreActivity.class);
+            startActivity(intent);
         });
+
+        View navComprar = findViewById(R.id.navComprar);
+        if (navComprar != null) {
+            navComprar.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, GpsActivity.class);
+                startActivity(intent);
+            });
+        }
     }
 }

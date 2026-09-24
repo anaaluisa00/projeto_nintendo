@@ -25,39 +25,30 @@ public class ExploreActivity extends AppCompatActivity {
         });
 
         // Navigation to Profile
-        findViewById(R.id.navInicio).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ExploreActivity.this, MainActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                startActivity(intent);
-            }
+        findViewById(R.id.navInicio).setOnClickListener(v -> {
+            Intent intent = new Intent(ExploreActivity.this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            startActivity(intent);
         });
 
-        findViewById(R.id.navExplorar).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Already in ExploreActivity
-            }
+        findViewById(R.id.navExplorar).setOnClickListener(v -> {
+            // Already in ExploreActivity
         });
 
-        findViewById(R.id.navPerfil).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ExploreActivity.this, ProfileActivity.class);
-                startActivity(intent);
-            }
+        findViewById(R.id.navComprar).setOnClickListener(v -> {
+            Intent intent = new Intent(ExploreActivity.this, GpsActivity.class);
+            startActivity(intent);
         });
 
-        // Navigation to Home (assuming MainActivity is Home)
-        // If the user clicks logo, we can also go back
-        findViewById(R.id.logoNintendo).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ExploreActivity.this, MainActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                startActivity(intent);
-            }
+        findViewById(R.id.navPerfil).setOnClickListener(v -> {
+            Intent intent = new Intent(ExploreActivity.this, ProfileActivity.class);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.logoNintendo).setOnClickListener(v -> {
+            Intent intent = new Intent(ExploreActivity.this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            startActivity(intent);
         });
     }
 }
